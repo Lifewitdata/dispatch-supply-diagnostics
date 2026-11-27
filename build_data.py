@@ -24,9 +24,20 @@ Honest definitions (LaDe records ONLY completed deliveries):
 """
 import glob
 import os
+import sys
 import pandas as pd
 import numpy as np
 from pathlib import Path
+
+if __name__ == "__main__" and "streamlit" in sys.modules:
+    import runpy
+    import streamlit as st
+
+    runpy.run_path(
+        str(Path(__file__).resolve().parent / "dashboard" / "dispatch_supply_health.py"),
+        run_name="__main__",
+    )
+    st.stop()
 
 ROOT = Path(__file__).resolve().parent
 RAW = ROOT / "data" / "raw"

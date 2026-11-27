@@ -122,7 +122,7 @@ python python/01_run_sql_pipeline.py       # DQ + funnel + imbalance + clean tab
 streamlit run dashboard/dispatch_supply_health.py
 ```
 
-The 16 checks execute the DuckDB queries, the full analysis notebook, and the
+The 17 checks execute the DuckDB queries, the full analysis notebook, and the
 Streamlit app. GitHub Actions runs them on every push and pull request, then
 regenerates the SQL outputs and fails if the committed CSVs are stale, deleted,
 or unexpectedly recreated.

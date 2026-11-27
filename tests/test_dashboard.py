@@ -33,3 +33,10 @@ def test_dashboard_handles_city_filter_and_empty_selection():
     app.multiselect[0].set_value([]).run()
     assert not app.exception
     assert any("Select at least one city" in warning.value for warning in app.warning)
+
+
+def test_rebuild_script_delegates_to_dashboard_in_streamlit():
+    app = AppTest.from_file(str(ROOT / "build_data.py"), default_timeout=30).run()
+    assert not app.exception
+    assert app.title[0].value == "Dispatch & Supply Health"
+    assert "304,286" in [metric.value for metric in app.metric]
