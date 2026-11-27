@@ -1,5 +1,7 @@
 # Dispatch & Supply Diagnostics
 
+**[Live Streamlit dashboard](https://dispatch-supply-diagnostics-6glxnd6zkj75bzka5t8cvy.streamlit.app/)**
+
 **Problem:** in last-mile delivery, some zones are slow and some hours lose
 orders — but "slow" and "lost" have different causes and different fixes.
 This project separates them: a dispatch funnel (accept-to-deliver speed,
@@ -136,6 +138,8 @@ To run a query directly, use `duckdb -c ".read sql/02_dispatch_funnel.sql"`
 from the project root; the SQL reads `data/raw/...` relatively.
 
 ## Deploy to Streamlit Community Cloud
+
+**Live app:** [Open the deployed dashboard](https://dispatch-supply-diagnostics-6glxnd6zkj75bzka5t8cvy.streamlit.app/).
 
 1. Publish this directory as the GitHub repository `dispatch-supply-diagnostics`.
 2. In [Streamlit Community Cloud](https://share.streamlit.io), choose **Create
