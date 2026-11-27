@@ -144,6 +144,15 @@ from the project root; the SQL reads `data/raw/...` relatively.
    `dashboard/dispatch_supply_health.py`.
 4. In **Advanced settings**, select Python **3.11**. No secrets are required.
 
+When using **Paste GitHub URL**, paste the
+[dashboard file URL](https://github.com/Lifewitdata/dispatch-supply-diagnostics/blob/main/dashboard/dispatch_supply_health.py),
+not the repository root.
+
+> **Troubleshooting:** If Cloud reports `No LaDe-D parquet files found` from
+> `build_data.py`, the app's main file is set incorrectly. Select
+> `dashboard/dispatch_supply_health.py` and reboot. `build_data.py` is an
+> offline rebuild utility, not a Streamlit entrypoint.
+
 The deployment reads only committed CSV files; it does not call an external
 API or require a database. See the [official deployment
 guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy)
