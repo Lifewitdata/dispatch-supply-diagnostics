@@ -1,0 +1,9 @@
+check_name,failed_rows,total_rows,fail_pct,verdict
+duplicate_order_id,0,304286,0.0,PASS
+negative_accept_to_deliver_min,0,304286,0.0,PASS
+duration_over_12h,3684,304286,1.210703088541701,WARN
+null_accept_gps,640,304286,0.2103284410061587,PASS
+null_delivery_gps,0,304286,0.0,PASS
+null_zone_or_courier,0,304286,0.0,PASS
+delivery_before_accept_dt,0,304286,0.0,PASS
+date_ds_mismatch,0,304286,0.0,PASS

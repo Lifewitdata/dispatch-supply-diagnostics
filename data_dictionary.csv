@@ -1,0 +1,28 @@
+file,column,definition,notes
+data/raw/lade_delivery_events.csv,order_id,LaDe order id,unique in sample (0 duplicates)
+data/raw/lade_delivery_events.csv,city,City (Chongqing/Hangzhou/Jilin/Shanghai/Yantai),LaDe-D split
+data/raw/lade_delivery_events.csv,zone_id,Region id within city (= region_id),162 zones in sample
+data/raw/lade_delivery_events.csv,courier_id,Courier id,1825 couriers in window
+data/raw/lade_delivery_events.csv,aoi_id,Area-of-interest id,LaDe AOI
+data/raw/lade_delivery_events.csv,aoi_type,AOI type code,LaDe AOI type
+data/raw/lade_delivery_events.csv,lng/lat,Package lng/lat,delivery location
+data/raw/lade_delivery_events.csv,accept_gps_lng/accept_gps_lat,Courier GPS at accept,640 nulls (0.21%)
+data/raw/lade_delivery_events.csv,delivery_gps_lng/delivery_gps_lat,Courier GPS at delivery,0 nulls
+data/raw/lade_delivery_events.csv,date,Order date (2022-06-01 to 2022-06-14),from ds (MMDD) + year 2022
+data/raw/lade_delivery_events.csv,accept_dt,Accept datetime,delivery crossing midnight gets +1 day
+data/raw/lade_delivery_events.csv,delivery_dt,Delivery datetime,see accept_dt note
+data/raw/lade_delivery_events.csv,accept_to_deliver_min,delivery_dt - accept_dt in minutes,median 115 p90 325; >720 flagged WARN
+data/raw/hourly_supply_demand.csv,city/zone_id/date/hour,Zone-hour grid,54,432 rows = 162 zones x 14 days x 24h
+data/raw/hourly_supply_demand.csv,eyeballs,Distinct couriers on shift in zone-hour (first-to-last accept that zone-day),derived proxy; LaDe has no session feed
+data/raw/hourly_supply_demand.csv,active_couriers,Distinct couriers who accepted >=1 order in zone-hour,<= eyeballs
+data/raw/hourly_supply_demand.csv,requests,Orders accepted in zone-hour,observed demand
+data/raw/hourly_supply_demand.csv,completed,Orders delivered in zone-hour,lags requests by ~2h median
+data/raw/hourly_supply_demand.csv,zeroes,1 if eyeballs = 0 else 0,58.1% all hours; 37.7% in peak 07-22
+data/raw/hourly_supply_demand.csv,expected_requests,Expanding median of requests same zone + hour-of-day over prior days only,NaN on day 1
+data/raw/hourly_supply_demand.csv,fulfilment_pct,requests / expected_requests * 100,median reported; means blow up in tiny zones
+data/raw/hourly_supply_demand.csv,lost_orders_est,max(0 expected - requests) only when eyeballs <= 1 else 0,modelled not observed; 20,699 in 14 days
+data/raw/hourly_supply_demand.csv,courier_utilisation_pct,active_couriers / eyeballs * 100,NaN when eyeballs = 0
+data/processed/dispatch_funnel_clean.csv,median_min/p90_min/mean_min,Zone-hour accept-to-deliver percentiles (durations 0-720 min only),median of hourly medians = 82 min (not event median 115)
+data/processed/dispatch_funnel_clean.csv,pct_over_30min/pct_over_240min,% orders over 30 / 240 min in zone-hour,valid durations only
+data/processed/dispatch_funnel_clean.csv,rolling_3h_median_min,3-hour rolling median of hourly median within zone,window function in sql/02
+data/processed/dispatch_funnel_clean.csv,slowest_zone_rank_in_hour,Rank of zone by p90 in that hour (1 = slowest),window function in sql/02

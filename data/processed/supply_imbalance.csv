@@ -1,0 +1,46 @@
+grain,group_1,group_2,zone_hours,zeroes_rate_pct,avg_fulfilment_pct,avg_utilisation_pct,lost_orders_est,requests,completed
+by_city,Chongqing,,15120,65.2,55.8,48.6,5069.0,70267.0,70190.0
+by_city,Hangzhou,,16800,52.0,57.1,47.7,8894.0,137459.0,137437.0
+by_city,Jilin,,1344,66.4,22.8,51.8,525.5,3159.0,3159.0
+by_city,Shanghai,,15456,51.6,133.3,56.3,3284.0,74980.0,74974.0
+by_city,Yantai,,5712,73.4,42.9,55.1,2926.0,18421.0,18421.0
+by_city_hour_band,Chongqing,afternoon 12-16,3150,32.6,237.5,43.7,1216.5,43082.0,32750.0
+by_city_hour_band,Chongqing,evening 17-22,3780,77.8,114.5,58.5,1266.5,3103.0,24065.0
+by_city_hour_band,Chongqing,late 23,630,99.4,0.0,100.0,4.5,5.0,291.0
+by_city_hour_band,Chongqing,morning 06-11,3780,39.3,147.6,49.4,2581.5,24077.0,13046.0
+by_city_hour_band,Chongqing,night 00-05,3780,100.0,,,0.0,0.0,38.0
+by_city_hour_band,Hangzhou,afternoon 12-16,3500,7.5,175.0,37.1,1275.5,43447.0,50048.0
+by_city_hour_band,Hangzhou,evening 17-22,4200,59.3,116.1,67.6,2435.0,12990.0,32845.0
+by_city_hour_band,Hangzhou,late 23,700,98.0,62.8,100.0,15.5,27.0,340.0
+by_city_hour_band,Hangzhou,morning 06-11,4200,26.5,203.2,47.3,5078.0,80824.0,54154.0
+by_city_hour_band,Hangzhou,night 00-05,4200,99.5,22.8,92.1,90.0,171.0,50.0
+by_city_hour_band,Jilin,afternoon 12-16,280,26.4,193.0,40.8,236.0,1006.0,1656.0
+by_city_hour_band,Jilin,evening 17-22,336,86.9,39.3,75.8,40.0,112.0,695.0
+by_city_hour_band,Jilin,late 23,56,100.0,,,0.0,0.0,1.0
+by_city_hour_band,Jilin,morning 06-11,336,40.2,331.2,57.9,249.5,2041.0,806.0
+by_city_hour_band,Jilin,night 00-05,336,100.0,,,0.0,0.0,1.0
+by_city_hour_band,Shanghai,afternoon 12-16,3220,5.6,231.6,43.4,230.0,31788.0,30921.0
+by_city_hour_band,Shanghai,evening 17-22,3864,35.9,319.0,61.1,445.0,18569.0,32346.0
+by_city_hour_band,Shanghai,late 23,644,90.4,170.6,100.0,14.0,136.0,748.0
+by_city_hour_band,Shanghai,morning 06-11,3864,50.6,196.6,68.9,2595.0,24487.0,10929.0
+by_city_hour_band,Shanghai,night 00-05,3864,100.0,,,0.0,0.0,30.0
+by_city_hour_band,Yantai,afternoon 12-16,1190,44.6,212.2,42.5,471.5,3107.0,10612.0
+by_city_hour_band,Yantai,evening 17-22,1428,85.3,78.0,45.3,76.5,357.0,4462.0
+by_city_hour_band,Yantai,late 23,238,99.6,,100.0,0.0,1.0,32.0
+by_city_hour_band,Yantai,morning 06-11,1428,54.8,235.6,70.8,2374.0,14936.0,3312.0
+by_city_hour_band,Yantai,night 00-05,1428,99.8,0.0,100.0,4.0,20.0,3.0
+worst_zones,Hangzhou,60,336,56.3,45.9,48.3,901.5,4686.0,4686.0
+worst_zones,Hangzhou,96,336,50.0,20.5,44.2,496.5,2697.0,2697.0
+worst_zones,Yantai,128,336,79.2,36.7,62.6,446.5,1569.0,1569.0
+worst_zones,Chongqing,103,336,58.0,14.4,47.4,441.0,3514.0,3513.0
+worst_zones,Hangzhou,94,336,45.5,56.4,49.4,365.0,3903.0,3903.0
+worst_zones,Yantai,151,336,76.2,3.1,56.1,357.0,1749.0,1749.0
+worst_zones,Hangzhou,119,336,82.4,6.3,61.8,330.5,1483.0,1483.0
+worst_zones,Hangzhou,62,336,50.6,15.4,43.7,317.0,2704.0,2704.0
+worst_zones,Yantai,115,336,76.8,62.0,53.5,314.0,1501.0,1501.0
+worst_zones,Chongqing,158,336,61.6,50.0,48.7,298.0,2500.0,2500.0
+worst_zones,Hangzhou,47,336,86.3,4.0,76.8,290.0,1136.0,1136.0
+worst_zones,Hangzhou,75,336,48.2,50.0,47.3,289.5,2856.0,2856.0
+worst_zones,Hangzhou,19,336,45.2,76.0,45.9,279.5,4929.0,4929.0
+worst_zones,Hangzhou,98,336,74.4,7.1,57.5,277.5,1409.0,1409.0
+worst_zones,Hangzhou,91,336,48.5,48.7,44.0,269.0,2916.0,2916.0
